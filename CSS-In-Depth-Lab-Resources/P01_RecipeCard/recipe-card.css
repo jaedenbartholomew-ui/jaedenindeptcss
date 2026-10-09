@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000000;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+    color: #242424;
+}
+
+main {
+    background: #000000;
+    padding: 48px;
+    position: relative;
+}
+
+main::before {
+    display: block;
+    height: 8px;
+}
+
+h1 {
+    margin: 0 0 24px;
+    left: 30px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.05;
+    color: #ffffff;
+    text-transform: uppercase;
+    left: 50px;
+}
+
+.recipies-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.recipies-info p {
+    margin: 0;
+    padding: 10px 16px;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.recipies-info span {
+    color: #589b4f;
+    margin-left: 5px;
+}
+
+.btn-primary {
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    padding: 13px 22px;
+    background: transparent;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.btn-primary:hover {
+    background: #2d5234;
+    transform: translateY(-2px);
+}
+
+.prep-steps {
+    margin: 35px 0 0;
+    padding: 0;
+    color: #ffffff;
+    list-style: none;
+    counter-reset: steps;
+}
+
+.step {
+    counter-increment: steps;
+    position: relative;
+    margin-bottom: 18px;
+    padding: 20px 22px 20px 70px;
+    background: transparent;
+    line-height: 1.7;
+    left: 30px;
+    bottom: 30px;
+}
+
+.step::before {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 35px 22px;
+    }
+
+    .step {
+        padding-left: 62px;
+    }
+}
